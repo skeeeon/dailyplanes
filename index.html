@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Planes - Technology & Infrastructure Solutions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .main-logo {
+            margin-bottom: 30px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .main-logo img {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+            filter: drop-shadow(0 10px 30px rgba(0,0,0,0.1));
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            max-width: 600px;
+            margin: 0 auto;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+
+        .companies {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 80px;
+        }
+
+        .company-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeInUp 0.8s ease-out var(--delay) both;
+        }
+
+        .company-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 80px rgba(0,0,0,0.15);
+        }
+
+        .company-card:nth-child(1) { --delay: 0.6s; }
+        .company-card:nth-child(2) { --delay: 0.8s; }
+
+        .company-logo {
+            margin-bottom: 25px;
+        }
+
+        .company-logo img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+        }
+
+        .company-card h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        .company-card p {
+            color: #7f8c8d;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 80px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(0,0,0,0.1);
+            animation: fadeInUp 0.8s ease-out 1s both;
+        }
+
+        .footer p {
+            color: #95a5a6;
+            font-size: 0.9rem;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .companies {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .company-card {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="main-logo">
+                <img src="./images/dailyplanes-logo.png" alt="Daily Planes Logo" />
+            </div>
+            <h1>Daily Planes</h1>
+            <p>Connecting innovative technology solutions through our family of companies</p>
+        </div>
+
+        <div class="companies">
+            <div class="company-card">
+                <div class="company-logo">
+                    <img src="./images/816tech-logo.png" alt="816tech Logo" />
+                </div>
+                <h2>816tech</h2>
+                <p>Innovative technology solutions and software development services, delivering cutting-edge digital experiences for modern businesses.</p>
+            </div>
+
+            <div class="company-card">
+                <div class="company-logo">
+                    <img src="./images/substrate-systems-logo.png" alt="Substrate Systems Logo" />
+                </div>
+                <h2>Substrate Systems</h2>
+                <p>Infrastructure and systems architecture specialists, providing robust foundation technologies and scalable platform solutions.</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2025 Daily Planes. All companies operating under the Daily Planes umbrella.</p>
+        </div>
+    </div>
+</body>
+</html>
