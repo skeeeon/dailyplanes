@@ -63,7 +63,18 @@
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 40px;
             margin-top: 80px;
+            align-items: stretch;
         }
+
+        .company-link {
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            animation: fadeInUp 0.8s ease-out var(--delay) both;
+        }
+
+        .company-link:nth-child(1) { --delay: 0.6s; }
+        .company-link:nth-child(2) { --delay: 0.8s; }
 
         .company-card {
             background: white;
@@ -72,16 +83,18 @@
             text-align: center;
             box-shadow: 0 20px 60px rgba(0,0,0,0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            animation: fadeInUp 0.8s ease-out var(--delay) both;
+            cursor: pointer;
+            width: 100%;
+            min-height: 320px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
-        .company-card:hover {
+        .company-link:hover .company-card {
             transform: translateY(-10px);
             box-shadow: 0 30px 80px rgba(0,0,0,0.15);
         }
-
-        .company-card:nth-child(1) { --delay: 0.6s; }
-        .company-card:nth-child(2) { --delay: 0.8s; }
 
         .company-logo {
             margin-bottom: 25px;
@@ -138,10 +151,39 @@
             .companies {
                 grid-template-columns: 1fr;
                 gap: 30px;
+                margin-top: 60px;
             }
             
             .company-card {
                 padding: 30px 20px;
+                min-height: 280px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px 15px;
+            }
+
+            .header h1 {
+                font-size: 1.8rem;
+            }
+
+            .header p {
+                font-size: 1rem;
+            }
+
+            .company-card {
+                padding: 25px 15px;
+                min-height: 260px;
+            }
+
+            .company-card h2 {
+                font-size: 1.5rem;
+            }
+
+            .company-card p {
+                font-size: 0.9rem;
             }
         }
     </style>
@@ -157,21 +199,25 @@
         </div>
 
         <div class="companies">
-            <div class="company-card">
-                <div class="company-logo">
-                    <img src="./images/816tech-logo.png" alt="816tech Logo" />
+            <a href="https://816tech.com" class="company-link" target="_blank" rel="noopener noreferrer">
+                <div class="company-card">
+                    <div class="company-logo">
+                        <img src="./images/816tech-logo.png" alt="816tech Logo" />
+                    </div>
+                    <h2>816tech</h2>
+                    <p>Kansas City's trusted partner for infrastructure, integration, and innovation. We architect robust solutions using proven open-source technologies that scale with your business.</p>
                 </div>
-                <h2>816tech</h2>
-                <p>Kansas City's trusted partner for infrastructure, integration, and innovation. We architect robust solutions using proven open-source technologies that scale with your business.</p>
-            </div>
+            </a>
 
-            <div class="company-card">
-                <div class="company-logo">
-                    <img src="./images/substrate-systems-logo.png" alt="Substrate Systems Logo" />
+            <a href="https://substratesys.com" class="company-link" target="_blank" rel="noopener noreferrer">
+                <div class="company-card">
+                    <div class="company-logo">
+                        <img src="./images/substrate-systems-logo.png" alt="Substrate Systems Logo" />
+                    </div>
+                    <h2>Substrate Systems</h2>
+                    <p>Purpose-Built Server Solutions. High-performance servers engineered for your specific needs. From edge computing to enterprise applications.</p>
                 </div>
-                <h2>Substrate Systems</h2>
-                <p>Purpose-Built Server Solutions. High-performance servers engineered for your specific needs. From edge computing to enterprise applications..</p>
-            </div>
+            </a>
         </div>
 
     </div>
