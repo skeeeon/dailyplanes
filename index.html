@@ -75,6 +75,7 @@
 
         .company-link:nth-child(1) { --delay: 0.6s; }
         .company-link:nth-child(2) { --delay: 0.8s; }
+        .company-link:nth-child(3) { --delay: 1.0s; }
 
         .company-card {
             background: white;
@@ -132,7 +133,7 @@
             margin-top: 80px;
             padding-top: 40px;
             border-top: 1px solid rgba(0,0,0,0.1);
-            animation: fadeInUp 0.8s ease-out 1s both;
+            animation: fadeInUp 0.8s ease-out 1.2s both;
         }
 
         .footer p {
@@ -148,6 +149,20 @@
             to {
                 opacity: 1;
                 transform: translateY(0);
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1200px) {
+            .companies {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+                margin-top: 60px;
+            }
+            
+            .company-link:nth-child(3) {
+                grid-column: 1 / -1;
+                justify-self: center;
+                width: calc(50% - 15px);
             }
         }
 
@@ -224,7 +239,19 @@
                     </div>
                     <div class="company-content">
                         <h2>Substrate Systems</h2>
-                        <p>Purpose-Built Server Solutions. High-performance servers engineered for your specific needs. From edge computing to enterprise applications..</p>
+                        <p>Purpose-Built Server Solutions. High-performance servers engineered for your specific needs. From edge computing to enterprise applications.</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://stone-age.io" class="company-link" target="_blank" rel="noopener noreferrer">
+                <div class="company-card">
+                    <div class="company-logo">
+                        <img src="./images/stone-age-logo.png" alt="Stone-age.io Logo" />
+                    </div>
+                    <div class="company-content">
+                        <h2>Stone-age.io</h2>
+                        <p>Open-source IoT Enterprise Operations framework. Leveraging PocketBase and NATS to deliver scalable, real-time solutions for modern industrial connectivity and data management.</p>
                     </div>
                 </div>
             </a>
