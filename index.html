@@ -3,7 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily Planes - Technology & Infrastructure Solutions</title>
+    <title>Daily Planes &mdash; Parent company of 816tech and Stone-age.io</title>
+    <meta name="description" content="Daily Planes is the parent company of 816tech and Stone-age.io, and the domain our teams work from.">
+    <link rel="canonical" href="https://dailyplanes.com/">
+    <meta name="theme-color" content="#f5f7fa">
+
+    <link rel="icon" type="image/png" href="./images/dailyplanes-logo.png">
+    <link rel="apple-touch-icon" href="./images/dailyplanes-logo.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Daily Planes">
+    <meta property="og:url" content="https://dailyplanes.com/">
+    <meta property="og:title" content="Daily Planes">
+    <meta property="og:description" content="Parent company of 816tech and Stone-age.io, and the domain our teams work from.">
+    <meta property="og:image" content="https://dailyplanes.com/images/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Daily Planes — parent company of 816tech and Stone-age.io">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Daily Planes">
+    <meta name="twitter:description" content="Parent company of 816tech and Stone-age.io, and the domain our teams work from.">
+    <meta name="twitter:image" content="https://dailyplanes.com/images/og-image.png">
     <style>
         * {
             margin: 0;
@@ -52,7 +73,7 @@
 
         .header p {
             font-size: 1.2rem;
-            color: #7f8c8d;
+            color: #5f6f70;
             max-width: 600px;
             margin: 0 auto;
             animation: fadeInUp 0.8s ease-out 0.4s both;
@@ -64,6 +85,9 @@
             gap: 40px;
             margin-top: 80px;
             align-items: stretch;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .company-link {
@@ -75,7 +99,6 @@
 
         .company-link:nth-child(1) { --delay: 0.6s; }
         .company-link:nth-child(2) { --delay: 0.8s; }
-        .company-link:nth-child(3) { --delay: 1.0s; }
 
         .company-card {
             background: white;
@@ -118,12 +141,19 @@
         .company-card h2 {
             font-size: 1.8rem;
             font-weight: 600;
-            margin-bottom: 15px;
+            margin-bottom: 6px;
             color: #2c3e50;
         }
 
+        .company-domain {
+            font-size: 0.9rem;
+            color: #64748b;
+            letter-spacing: 0.02em;
+            margin-bottom: 14px;
+        }
+
         .company-card p {
-            color: #7f8c8d;
+            color: #5f6f70;
             font-size: 1rem;
             line-height: 1.6;
         }
@@ -133,12 +163,23 @@
             margin-top: 80px;
             padding-top: 40px;
             border-top: 1px solid rgba(0,0,0,0.1);
-            animation: fadeInUp 0.8s ease-out 1.2s both;
+            animation: fadeInUp 0.8s ease-out 1.0s both;
         }
 
         .footer p {
-            color: #95a5a6;
+            color: #5f6f70;
             font-size: 0.9rem;
+        }
+
+        .footer a {
+            color: #2c3e50;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(44,62,80,0.3);
+            transition: border-color 0.2s ease;
+        }
+
+        .footer a:hover {
+            border-bottom-color: #2c3e50;
         }
 
         @keyframes fadeInUp {
@@ -152,17 +193,20 @@
             }
         }
 
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-delay: 0ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
         @media (min-width: 769px) and (max-width: 1200px) {
             .companies {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 30px;
                 margin-top: 60px;
-            }
-            
-            .company-link:nth-child(3) {
-                grid-column: 1 / -1;
-                justify-self: center;
-                width: calc(50% - 15px);
             }
         }
 
@@ -170,13 +214,13 @@
             .header h1 {
                 font-size: 2.2rem;
             }
-            
+
             .companies {
                 grid-template-columns: 1fr;
                 gap: 30px;
                 margin-top: 60px;
             }
-            
+
             .company-card {
                 padding: 30px 20px;
             }
@@ -213,33 +257,22 @@
     <div class="container">
         <div class="header">
             <div class="main-logo">
-                <img src="./images/dailyplanes-logo.png" alt="Daily Planes Logo" />
+                <img src="./images/dailyplanes-logo.png" alt="Daily Planes logo" width="120" height="120" />
             </div>
             <h1>Daily Planes</h1>
-            <p>Connecting innovative technology solutions through our family of companies</p>
+            <p>Parent company of 816tech and Stone-age.io, and the domain our teams work from.</p>
         </div>
 
         <div class="companies">
             <a href="https://816tech.com" class="company-link" target="_blank" rel="noopener noreferrer">
                 <div class="company-card">
                     <div class="company-logo">
-                        <img src="./images/816tech-logo.png" alt="816tech Logo" />
+                        <img src="./images/816tech-logo.png" alt="816tech logo" width="80" height="80" />
                     </div>
                     <div class="company-content">
                         <h2>816tech</h2>
-                        <p>Kansas City's trusted partner for infrastructure, integration, and innovation. We architect robust solutions using proven open-source technologies that scale with your business.</p>
-                    </div>
-                </div>
-            </a>
-
-            <a href="https://substratesys.com" class="company-link" target="_blank" rel="noopener noreferrer">
-                <div class="company-card">
-                    <div class="company-logo">
-                        <img src="./images/substrate-systems-logo.png" alt="Substrate Systems Logo" />
-                    </div>
-                    <div class="company-content">
-                        <h2>Substrate Systems</h2>
-                        <p>Purpose-Built Server Solutions. High-performance servers engineered for your specific needs. From edge computing to enterprise applications.</p>
+                        <p class="company-domain">816tech.com</p>
+                        <p>Technology integration built on systems you own. A Kansas City integrator for physical security, networks, and the software that connects them &mdash; access control, video, and infrastructure with no vendor lock-in.</p>
                     </div>
                 </div>
             </a>
@@ -247,14 +280,19 @@
             <a href="https://stone-age.io" class="company-link" target="_blank" rel="noopener noreferrer">
                 <div class="company-card">
                     <div class="company-logo">
-                        <img src="./images/stone-age-logo.png" alt="Stone-age.io Logo" />
+                        <img src="./images/stone-age-logo.png" alt="Stone-age.io logo" width="80" height="80" />
                     </div>
                     <div class="company-content">
                         <h2>Stone-age.io</h2>
-                        <p>Open-source IoT Enterprise Operations framework. Leveraging PocketBase and NATS to deliver scalable, real-time solutions for modern industrial connectivity and data management.</p>
+                        <p class="company-domain">stone-age.io</p>
+                        <p>Open-source platform for connected operations. One console and automation layer across the door controllers, cameras, sensors, and machines your sites already run &mdash; built on PocketBase, NATS, and Nebula.</p>
                     </div>
                 </div>
             </a>
+        </div>
+
+        <div class="footer">
+            <p>Questions? <a href="mailto:info@dailyplanes.com">info@dailyplanes.com</a></p>
         </div>
 
     </div>
